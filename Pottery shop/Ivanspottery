@@ -1,0 +1,58 @@
+package com.ivanspotter;
+
+public class IvansPottery {
+
+    private String pitcher;
+    private String pot;
+    private int potteryassortiment;
+    private double ballance;
+    private String namesalesman;
+
+    public String getPitcher() {
+        return pitcher;
+    }
+
+    public String getPot() {
+        return pot;
+    }
+
+    public int getPotteryAssortiment() {
+        return potteryassortiment;
+    }
+
+    public double getBalance() {
+        return ballance;
+    }
+
+    public String getNamesalesman() {
+        return namesalesman;
+    }
+
+    public void setPitcher(String pitcher) {
+        this.pitcher = pitcher;
+    }
+
+    public void setPot(String pot) {
+        this.pot = pot;
+    }
+
+    public void setPotteryAssortiment(int potteryassortiment) {
+        this.potteryassortiment = potteryassortiment;
+    }
+
+    public void setBalance(double ballance) {
+        this.ballance = ballance;
+    }
+
+    public void setNamesalesman(String namesalesman) {
+        this.namesalesman = namesalesman;
+    }
+
+    public void displayInfo() {
+        System.out.println("Pitcher: " + pitcher);
+        System.out.println("Pot: " + pot);
+        System.out.println("Pottery assortiment: " + potteryassortiment);
+        System.out.println("Seller: " + namesalesman);
+        System.out.println("Balance: " + ballance);
+    }
+}
