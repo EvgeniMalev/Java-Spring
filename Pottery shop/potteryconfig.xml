@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="potbean" class="com.ivanspotter.IvansPottery">
+        <property name="pot" value="Manu_Manjunatha"/>
+        <property name="pitcher" value="Manu_Manjunatha"/>
+        <property name="potteryAssortiment" value="10"/>
+        <property name="balance" value="1000.5"/>
+        <property name="namesalesman" value="John Doe"/>
+    </bean>
+</beans>
