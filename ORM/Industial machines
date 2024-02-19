@@ -1,0 +1,51 @@
+************************************************************************************
+  Connection elements from industrial machines to database, using SQL
+************************************************************************************
+
+import java.sql.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws SQLException {
+        Connection connection = setUpConnection();
+
+        List<String> typemachine = new ArrayList<>();
+        List<Integer> serialnumber = new ArrayList<>();
+
+        ResultSet result = prepareAndExecute(connection);
+
+        getTypeofmachineNames(typemachine, result);
+        getSerialNumbers(serialnumber, result);
+
+        printMachineProperties(typemachine, serialnumber);
+
+        connection.close(); 
+    }
+
+    private static Connection setUpConnection() throws SQLException {
+        return ConnectionSQL.setUpConnection();
+    }
+
+    private static ResultSet prepareAndExecute(Connection connection) throws SQLException {
+        PreparedStatement preparedStatement =
+                connection.prepareStatement("SELECT type FROM machines");
+        return preparedStatement.executeQuery();
+    }
+
+    private static void getTypeofmachineNames(List<String> typemachine, ResultSet result) throws SQLException {
+        while (result.next()) {
+            typemachine.add(result.getString("type"));
+        }
+    }
+
+    private static void getSerialNumbers(List<Integer> serialnumber, ResultSet result) throws SQLException {
+        while (result.next()) {
+            serialnumber.add(result.getInt("serial_number"));
+        }
+    }
+
+    private static void printMachineProperties(List<String> typemachine, List<Integer> serialnumber) {
+        
+    }
+}
