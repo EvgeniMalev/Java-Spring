@@ -1,0 +1,8 @@
+CREATE TABLE BUILDING (
+   id INT NOT NULL AUTO_INCREMENT,
+   location_town VARCHAR(20) DEFAULT NULL,
+   location_country VARCHAR(20) DEFAULT NULL,
+   humancapacity INT DEFAULT NULL,
+   floors INT DEFAULT NULL,
+   PRIMARY KEY (id)
+);
