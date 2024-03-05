@@ -1,0 +1,9 @@
+CREATE TABLE `Engineer` (
+  `id` int(11) unsigned NOT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `company` varchar(20) DEFAULT NULL,
+  `field_of_engineering` varchar(20) DEFAULT NULL,
+  `working_hours` int(3) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `field_of_engineering_index` (`field_of_engineering`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
